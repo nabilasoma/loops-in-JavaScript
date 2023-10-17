@@ -1,8 +1,8 @@
 
 // Number One:
-// print all even number within 0 to 10 
+// print all odd numbers within 0 to 100 
 
-const evenNumbers = document.getElementById("evenNumbers");
+const oddNumbers = document.getElementById("oddNumbers");
 const showButton = document.getElementById("showButton");
 
 showButton.addEventListener('click', () => {
@@ -13,7 +13,7 @@ showButton.addEventListener('click', () => {
             inputText = inputText + i + " ";
         }
     }
-    evenNumbers.textContent = inputText;
+    oddNumbers.textContent = inputText;
 })
 
 // show in console
@@ -24,9 +24,54 @@ for(i = 0; i <= 100; i++){
     }
 };
 
-// Number two:
-// print total of all numbers of an array 
 
+// find out the total vowel from a sentence 
+
+const vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+function findVowels(sentence){
+    let count = 0;
+    const letters = Array.from(sentence);
+
+    letters.forEach(function(value){
+        if(vowel.includes(value)){
+            count++
+        }
+    });
+
+    return count;
+}
+console.log(findVowels("I am learning JavaScript"));
+
+// uses of For-of loop 
+
+const myDolls = document.getElementById('myDolls');
+const myDoll = ['Barbi', 'Fairy', 'Red Belvet', 'Micky Mouse', 'Sleepy Baby', 'Dolphin'];
+let newDolls = "";
+for(doll of myDoll){ 
+    newDolls = newDolls + doll + " </br> ";
+}
+myDolls.innerHTML = newDolls;
+
+// // uses of For-in loop 
+// The JavaScript for in statement loops through the properties of an Object
+
+const numbers = document.getElementById('numbers');
+const showNumbers = document.getElementById('showNumbers');
+const personNames = {fname:"Nabila", lname:"Niar", job: "Frontend developer"}; 
+
+let num2 = "";
+showNumbers.addEventListener('click', () => {
+    for(let x in personNames){
+        num2 = num2 + personNames[x] + " ";
+    }
+    numbers.textContent = num2;
+});
+
+
+
+
+// print total of all numbers of an array 
 
 
 const num = [2, 55, 44, 21, 36, 89];
@@ -77,24 +122,7 @@ const evenNumber = myNum => {
 console.log(evenNumber(77));
 
 
-// Number six: Problem solving
-// find out the total vowel from a sentence 
 
-const vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-
-function findVowels(sentence){
-    let count = 0;
-    const letters = Array.from(sentence);
-
-    letters.forEach(function(value){
-        if(vowel.includes(value)){
-            count++
-        }
-    });
-
-    return count;
-}
-console.log(findVowels("I am learning JavaScript"));
 
 
 // show cats name by forEach loop

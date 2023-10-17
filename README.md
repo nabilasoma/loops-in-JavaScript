@@ -27,13 +27,48 @@ for(i = 0; i <= 100; i++){
 };
 
 
-# What is a JavaScript Function?
+# uses of forEach loop
+
+The forEach() method is an iterative method. It calls a provided callbackFn function once for each element in an array in ascending-index order. Unlike map() , forEach() always returns undefined and is not chainable. The typical use case is to execute side effects at the end of a chain.
+ we can find out all vowel from a sentence by using forEach loop
+
+ const vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+function findVowels(sentence){
+    let count = 0;
+    const letters = Array.from(sentence);
+
+    letters.forEach(function(value){
+        if(vowel.includes(value)){
+            count++
+        }
+    });
+
+    return count;
+}
+console.log(findVowels("I am learning JavaScript"));
+
+# The For Of Loop
+
+The JavaScript for of statement loops through the values of an iterable object.
+It lets us loop over iterable data structures such as Arrays, Strings, Maps, etc.
 
 
 
-# Function Syntax
+#  The For In Loop
 
+The for in statement loops through the properties of an object----
 
+const numbers = document.getElementById('numbers');
+const showNumbers = document.getElementById('showNumbers');
+const personNames = {fname:"Nabila", lname:"Niar", job: "Frontend developer"}; 
 
-#  Function Types
+let num2 = "";
+showNumbers.addEventListener('click', () => {
+    for(let x in personNames){
+        num2 = num2 + personNames[x] + " ";
+    }
+    numbers.textContent = num2;
+});
+
 
