@@ -53,7 +53,13 @@ console.log(findVowels("I am learning JavaScript"));
 The JavaScript for of statement loops through the values of an iterable object.
 It lets us loop over iterable data structures such as Arrays, Strings, Maps, etc.
 
-
+const myDolls = document.getElementById('myDolls');
+const myDoll = ['Barbi', 'Fairy', 'Red Belvet', 'Micky Mouse', 'Sleepy Baby', 'Dolphin'];
+let newDolls = "";
+for(doll of myDoll){ 
+    newDolls = newDolls + doll + " </br> ";
+}
+myDolls.innerHTML = newDolls;
 
 #  The For In Loop
 
